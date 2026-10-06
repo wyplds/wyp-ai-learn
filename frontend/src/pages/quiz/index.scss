@@ -1,0 +1,269 @@
+/* 答题页样式 - 暖雾白 + 苔绿 + 尘金 */
+
+.quiz-page {
+  min-height: 100vh;
+  padding: 16px 32px 60px;
+  background: var(--bg);
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 200px;
+  font-size: 32px;
+  color: var(--text-muted);
+}
+
+/* 顶部栏 */
+.quiz-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.close-btn {
+  font-size: 48px;
+  color: var(--text-muted);
+  font-weight: 300;
+  padding: 10px;
+}
+
+.question-num {
+  font-size: 26px;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.coin-badge-small {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: var(--radius-full);
+  color: var(--accent-deep);
+  background: var(--accent-soft);
+  border: 1px solid var(--accent);
+  font-size: 24px;
+  font-weight: 700;
+}
+
+/* 进度条 */
+.quiz-progress {
+  margin: 12px 0 20px;
+}
+
+.progress-track {
+  height: 16px;
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  background: var(--line);
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  background: var(--brand);
+  transition: width 0.3s ease;
+}
+
+.progress-meta {
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.meta-text {
+  color: var(--text-muted);
+  font-size: 24px;
+}
+
+/* 题干 */
+.quiz-title {
+  display: block;
+  margin-top: 28px;
+  margin-bottom: 12px;
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--text);
+}
+
+/* 题目配图 */
+.question-image-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--surface);
+}
+
+.question-image {
+  width: 100%;
+  height: 360px;
+}
+
+/* 选项列表 */
+.options-list {
+  margin-top: 12px;
+}
+
+.option {
+  width: 100%;
+  min-height: 104px;
+  border: 1px solid var(--line);
+  margin-top: 20px;
+  border-radius: var(--radius-lg);
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--text);
+  background: var(--surface);
+  box-shadow: var(--shadow-card);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 20px 28px;
+  box-sizing: border-box;
+  word-break: break-all;
+}
+
+.option.selected {
+  border-color: var(--brand);
+  background: var(--brand-soft);
+  color: var(--brand-deep);
+}
+
+.option.correct {
+  color: var(--correct);
+  background: var(--correct-soft);
+  border-color: var(--correct);
+}
+
+.option.wrong {
+  color: var(--wrong);
+  background: var(--wrong-soft);
+  border-color: var(--wrong);
+}
+
+.check-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--correct);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.cross-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--wrong);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.option-text {
+  flex: 1;
+}
+
+/* 提交按钮 */
+.submit-btn {
+  margin-top: 32px;
+}
+
+/* 结果提示 */
+.result-tip {
+  margin-top: 24px;
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 26px;
+  font-weight: 700;
+
+  &.is-correct {
+    border: 1px solid var(--correct);
+    background: var(--correct-soft);
+    color: var(--correct);
+  }
+
+  &.is-wrong {
+    border: 1px solid var(--wrong);
+    background: var(--wrong-soft);
+    color: var(--wrong);
+  }
+}
+
+/* 讲解区 */
+.explain-box {
+  margin-top: 20px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--accent);
+  background: var(--accent-soft);
+  padding: 22px;
+  color: var(--text);
+  font-size: 28px;
+  line-height: 1.65;
+  box-shadow: var(--shadow-card);
+}
+
+.explain-title {
+  color: var(--accent-deep);
+  font-weight: 700;
+}
+
+.explain-content {
+  display: block;
+  margin-top: 8px;
+  color: var(--text);
+}
+
+/* 导航按钮 */
+.nav-buttons {
+  margin-top: 32px;
+  display: flex;
+  gap: 20px;
+}
+
+.prev-btn,
+.next-btn {
+  flex: 1;
+  height: 84px;
+  border-radius: var(--radius-full);
+  font-size: 28px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.prev-btn {
+  border: 1px solid var(--line);
+  color: var(--text-muted);
+  background: var(--surface);
+}
+
+.next-btn {
+  border: 1px solid var(--brand);
+  color: var(--brand);
+  background: var(--brand-soft);
+}

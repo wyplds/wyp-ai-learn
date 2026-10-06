@@ -1,0 +1,112 @@
+/* 全局样式 - 暖雾白 + 苔绿 + 尘金 设计系统 */
+
+/* 设计令牌 */
+page {
+  /* 底色与表面 */
+  --bg: #faf7f2;            /* 暖雾白 */
+  --surface: #ffffff;        /* 纯白卡 */
+  --surface-muted: #f4efe6;  /* 暖雾白深一阶 */
+
+  /* 文字 */
+  --text: #2a2620;           /* 深墨 */
+  --text-muted: #6b6258;     /* 暖灰 */
+  --text-faint: #9a8e80;     /* 暖灰浅 */
+
+  /* 品牌主色 */
+  --brand: #5b8c7d;          /* 苔绿 */
+  --brand-deep: #3f6b57;     /* 苔绿深 */
+  --brand-soft: #e8f0eb;     /* 苔绿软底 */
+
+  /* 强调色 */
+  --accent: #c9a463;         /* 尘金 */
+  --accent-deep: #a4843f;    /* 尘金深 */
+  --accent-soft: #f5edd8;    /* 尘金软底 */
+
+  /* 状态色 */
+  --correct: #3e9b6f;
+  --correct-soft: #e6f4ed;
+  --wrong: #d9534f;
+  --wrong-soft: #fcebea;
+
+  /* 边线 */
+  --line: #e8e0d0;           /* 暖雾边 */
+  --line-soft: #ede3d2;      /* 暖雾边浅 */
+
+  /* 阴影 */
+  --shadow-card: 0 4px 14px rgba(42, 38, 32, 0.05);
+  --shadow-card-strong: 0 8px 24px rgba(42, 38, 32, 0.08);
+  --shadow-brand: 0 8px 20px rgba(91, 140, 125, 0.22);
+
+  /* 圆角 */
+  --radius-sm: 8px;
+  --radius: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 999px;
+
+  font-family: 'PingFang SC', 'Noto Sans SC', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  font-size: 28px;
+  line-height: 1.6;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+view, text, image, button, input, textarea, scroll-view, swiper, navigator {
+  box-sizing: border-box;
+}
+
+/* 全局按钮重置 */
+button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+
+  &::after {
+    display: none;
+  }
+}
+
+/* 通用主按钮 - 苔绿 */
+.btn-primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 88px;
+  border-radius: var(--radius-lg);
+  color: #ffffff;
+  background: var(--brand);
+  box-shadow: var(--shadow-brand);
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* 次要按钮 - 苔绿描边 */
+.btn-secondary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 88px;
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--brand);
+  color: var(--brand);
+  background: var(--brand-soft);
+  font-size: 28px;
+  font-weight: 600;
+}
+
+/* 通用卡片 */
+.card {
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line);
+  background: var(--surface);
+  padding: 24px;
+  box-shadow: var(--shadow-card);
+}

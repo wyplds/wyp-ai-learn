@@ -1,0 +1,303 @@
+/* 首页样式 - 暖雾白 + 苔绿 + 尘金 */
+
+.index-page {
+  min-height: 100vh;
+  padding: 16px 32px 180px;
+  background: var(--bg);
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/* 顶部工具栏 */
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  margin-bottom: 24px;
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-card);
+}
+
+.hello-user {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.hello-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--brand);
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 700;
+  flex-shrink: 0;
+  border: 2px solid var(--accent);
+}
+
+.hello-avatar-img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid var(--accent);
+  flex-shrink: 0;
+}
+
+.hello-name {
+  font-size: 28px;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.coin-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: var(--radius-full);
+  color: var(--accent-deep);
+  background: var(--accent-soft);
+  border: 1px solid var(--accent);
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.coin-icon {
+  font-size: 28px;
+  color: var(--accent);
+}
+
+/* 页面标题 */
+.page-title {
+  display: block;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+/* 输入区域 */
+.quick-input {
+  margin: 20px 0 28px;
+}
+
+.input-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.input-label {
+  display: inline-flex;
+  align-items: center;
+  min-height: 56px;
+  padding: 0 24px;
+  border-radius: var(--radius);
+  background: var(--brand-soft);
+  border: 1px solid var(--brand);
+  color: var(--brand-deep);
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.mini-mascot {
+  width: 88px;
+  height: 88px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-xl);
+  background: var(--brand-soft);
+  border: 1px solid var(--brand);
+  font-size: 48px;
+}
+
+.input-area {
+  width: 100%;
+  min-height: 144px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line);
+  background: var(--surface);
+  padding: 24px 28px;
+  font-size: 26px;
+  line-height: 1.75;
+  color: var(--text);
+  box-sizing: border-box;
+  box-shadow: var(--shadow-card);
+}
+
+.input-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+/* 生成图片开关 */
+.image-toggle-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding: 20px 24px;
+  border-radius: var(--radius);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.image-toggle-row.is-active {
+  border-color: var(--brand);
+  background: var(--brand-soft);
+}
+
+.image-toggle-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.image-toggle-icon {
+  font-size: 30px;
+}
+
+.image-toggle-label {
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.toggle-pill {
+  width: 84px;
+  height: 48px;
+  border-radius: var(--radius-full);
+  background: var(--line);
+  padding: 4px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  transition: background 0.2s ease;
+}
+
+.toggle-pill.is-on {
+  background: var(--brand);
+  justify-content: flex-end;
+}
+
+.toggle-knob {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease;
+}
+
+.generate-btn {
+  width: 440px;
+}
+
+.generate-btn.is-loading {
+  opacity: 0.7;
+}
+
+.btn-arrow {
+  font-size: 32px;
+}
+
+/* 已完成关卡网格 */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.quiz-card {
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  min-height: 116px;
+  padding: 20px;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  box-shadow: var(--shadow-card);
+}
+
+.quiz-dot {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--brand-soft);
+  color: var(--brand);
+  border: 1px solid var(--brand);
+  font-size: 22px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.quiz-name {
+  display: block;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--text);
+}
+
+.quiz-meta {
+  display: block;
+  margin-top: 8px;
+  color: var(--text-muted);
+  font-size: 22px;
+}
+
+/* 段落标题 */
+.section-title {
+  display: block;
+  margin: 24px 0 20px;
+  font-size: 34px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+/* 学习小贴士 */
+.tip-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.tip-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 24px;
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-card);
+}
+
+.tip-icon {
+  font-size: 40px;
+  flex-shrink: 0;
+}
+
+.tip-text {
+  font-size: 26px;
+  color: var(--text);
+  line-height: 1.5;
+}
